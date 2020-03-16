@@ -4,6 +4,7 @@ public class VirusStats {
     private String state;
     private String country;
     private int latestCases;
+    private int DeltaDiffrence;
 
     public String getState() {
         return state;
@@ -27,5 +28,13 @@ public class VirusStats {
 
     public void setLatestCases(int latestCases) {
         this.latestCases = latestCases;
+    }
+
+    public int getDeltaDiffrence() {
+        return DeltaDiffrence;
+    }
+
+    public void setDeltaDiffrence(int deltaDiffrence) {
+        DeltaDiffrence = deltaDiffrence;
     }
 }
