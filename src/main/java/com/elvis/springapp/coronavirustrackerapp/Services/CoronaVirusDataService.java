@@ -38,6 +38,9 @@ public class CoronaVirusDataService {
             VirusStats virusStats = new VirusStats();
             virusStats.setCountry(record.get("Country/Region"));
             virusStats.setLatestCases(Integer.parseInt(record.get(record.size() - 1)));
+            virusStats.setDeltaDiffrence(virusStats
+                            .getLatestCases() - Integer.parseInt(record
+                            .get(record.size() - 2)));
             virusStats.setState(record.get("Province/State"));
             stats.add(virusStats);
         }
