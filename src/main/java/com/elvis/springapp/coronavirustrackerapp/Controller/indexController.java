@@ -24,8 +24,13 @@ public class indexController {
                 .stream()
                 .mapToInt(VirusStats::getLatestCases)
                 .sum();
+        int TotalNewCases = stats
+                .stream()
+                .mapToInt(VirusStats::getDeltaDiffrence)
+                .sum();
         model.addAttribute("locationStatistics", coronaVirusDataService.getStatsList());
         model.addAttribute("TotalCases", TotalCases);
+        model.addAttribute("NewCases", TotalNewCases);
         return "index";
     }
 
